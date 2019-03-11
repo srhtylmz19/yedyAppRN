@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a934819c-917c-47d1-bb37-3e17a9cb62e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/bg2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/chef.jpeg" afterDir="false" />
-    </list>
+    <list default="true" id="a934819c-917c-47d1-bb37-3e17a9cb62e1" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,7 +17,7 @@
       <file leaf-file-name="FilterResult.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/screens/FilterResult.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="315">
               <caret line="21" column="27" selection-start-line="21" selection-end-line="22" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -32,7 +29,7 @@
       <file leaf-file-name="PlaceList.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/screens/PlaceList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="90">
               <caret line="6" column="46" selection-start-line="6" selection-end-line="7" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -44,8 +41,8 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="240">
+              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -56,7 +53,7 @@
       <file leaf-file-name="PlaceDetail.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/screens/PlaceDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
+            <state relative-caret-position="1530">
               <caret line="102" selection-start-line="102" selection-end-line="102" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -68,7 +65,7 @@
       <file leaf-file-name="Filter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/screens/Filter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="165">
               <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -183,11 +180,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="6" />
-    <option name="y" value="23" />
-    <option name="width" value="1674" />
-    <option name="height" value="1027" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -195,7 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,6 +206,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -322,22 +317,22 @@
       <workItem from="1552310516614" duration="398000" />
       <workItem from="1552312132221" duration="12149000" />
       <workItem from="1552331696950" duration="509000" />
+      <workItem from="1552332731714" duration="247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65635000" />
+    <option name="totallyTimeSpent" value="65882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50030136" side_tool="true" weight="0.2987552" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32987553" />
       <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32987553" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32883817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4996986" visible="true" weight="0.28388473" />
@@ -499,9 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -551,7 +543,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/Filter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="165">
           <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -561,7 +553,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/FilterResult.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="315">
           <caret line="21" column="27" selection-start-line="21" selection-end-line="22" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -574,7 +566,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/PlaceList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="90">
           <caret line="6" column="46" selection-start-line="6" selection-end-line="7" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -587,7 +579,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/PlaceDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
+        <state relative-caret-position="1530">
           <caret line="102" selection-start-line="102" selection-end-line="102" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -597,8 +589,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="240">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
