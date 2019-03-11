@@ -1,0 +1,30 @@
+{
+    "artboards": [
+        "/src/screens/Login.js",
+        "/src/screens/Register.js",
+        "/src/screens/ForgotPassword.js",
+        "/src/screens/Homepage.js",
+        "/src/screens/PlaceDetail.js",
+        "/src/screens/Filter.js",
+        "/src/screens/FilterResult.js"
+    ],
+    "symbols": [
+        "/src/symbols/RegisterTextElement.js",
+        "/src/symbols/ForgotPasswordElement.js",
+        "/src/symbols/LoginElement.js",
+        "/src/symbols/RegisterElement.js",
+        "/src/symbols/NextButton.js",
+        "/src/symbols/HomePageBtn.js"
+    ],
+    "assets": [],
+    "defaultArtboardDirectory": "/src/screens",
+    "defaultSymbolDirectory": "/src/symbols",
+    "defaultAssetDirectory": "/src/assets",
+    "deviceName": "iPhone X",
+    "deviceOrientation": "portrait",
+    "basePath": "/Users/derdakarakis/Desktop/YedyLast",
+    "tempPath": "/var/folders/y6/k97y_gcd2sb959m0680_zjm00000gn/T/BuilderpZGRz4Z",
+    "useStylesheet": true,
+    "rulers": {},
+    "missingFonts": []
+}

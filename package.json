@@ -1,0 +1,38 @@
+{
+  "name": "Yedy",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest": "^23.6.0",
+    "react-test-renderer": "16.3.0-alpha.1"
+  },
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "node node_modules/jest/bin/jest.js"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "dependencies": {
+    "@builderx/icons": "^0.1.5",
+    "@builderx/react-native-swiper": "^0.1.5",
+    "@builderx/tab-view": "^0.1.5",
+    "@builderx/utils": "^0.1.6",
+    "lodash": "^4.17.4",
+    "native-base": "^2.10.0",
+    "react": "16.3.0",
+    "react-native": "0.54.0",
+    "react-native-checkbox-group": "^1.0.3",
+    "react-native-elements": "^1.1.0",
+    "react-native-modest-checkbox": "^3.1.0",
+    "react-native-picker-select": "^6.0.0",
+    "react-native-slideshow": "^1.0.1",
+    "react-native-snap-carousel": "^3.7.5",
+    "react-native-svg": "^8.0.10",
+    "react-native-vector-icons": "^6.1.0",
+    "react-navigation": "1.2.1"
+  }
+}

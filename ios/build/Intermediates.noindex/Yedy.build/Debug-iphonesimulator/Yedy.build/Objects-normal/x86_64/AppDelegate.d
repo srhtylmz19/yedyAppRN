@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Yedy/AppDelegate.m \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Yedy/AppDelegate.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Fabric.framework/Modules/module.modulemap \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Fabric.framework/Headers/FABAttributes.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Fabric.framework/Headers/Fabric.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Crashlytics.framework/Modules/module.modulemap \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Crashlytics.framework/Headers/ANSCompatibility.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Crashlytics.framework/Headers/Answers.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Crashlytics.framework/Headers/CLSStackFrame.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Crashlytics.framework/Headers/CLSReport.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Crashlytics.framework/Headers/CLSLogging.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Crashlytics.framework/Headers/CLSAttributes.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/Crashlytics.framework/Headers/Crashlytics.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBundleURLProvider.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h

@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Modules/RCTDevSettings.mm \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Modules/RCTDevSettings.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Modules/RCTJSCSamplingProfiler.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h \
+  /Users/serhatyilmaz/Desktop/yedyAppRN-master/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h
