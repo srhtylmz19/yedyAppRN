@@ -1,79 +1,37 @@
 import React, {Component} from "react";
 import {Center} from "@builderx/utils";
-import {View, TouchableOpacity, Text, StyleSheet, Image,Dimensions,ScrollView} from "react-native";
+import {View, TouchableOpacity, Text, StyleSheet, Image,Dimensions,ScrollView,Alert} from "react-native";
 import {Container, Header, Left, Body, Right, Button, Icon, Title, Picker, Form, ListItem} from 'native-base';
 import RNPickerSelect from 'react-native-picker-select';
 import { CheckBox } from 'react-native-elements'
+
+import api from './Api';
 
 const screen_width = Dimensions.get('window').width;
 const screen_heigth = Dimensions.get('window').height;
 
 
 export default class Filter extends Component {
+
+    componentDidMount()
+    {
+        this.getRegions()
+    }
+
     constructor(props) {
         super(props);
         this.state = {
             selected: undefined,
             zone_id : null,
             city_id : null,
-            checkedStar1:true,
+            flavorPoint:false,
+            checkedStar1:false,
             checkedStar2:false,
             checkedStar3:false,
-            flavorPoint:true,
-            zones:[
-                {
-                    label: 'Marmara Bölgesi',
-                    value: 'Marmara Bölgesi',
-                },
-                {
-                    label: 'Ege Bölgesi',
-                    value: 'Ege Bölgesi',
-                },
-                {
-                    label: 'Akdeniz Bölgesi',
-                    value: 'Akdeniz Bölgesi',
-                },
-                {
-                    label: 'Karadeniz Bölgesi',
-                    value: 'Karadeniz Bölgesi',
-                },
-                {
-                    label: 'iç Anadolu Bölgesi',
-                    value: 'İç Anadolu Bölgesi',
-                },
-                {
-                    label: 'Güneydoğu Bölgesi',
-                    value: 'Güneydoğu Bölgesi',
-                },
-            ],
-            cities:[
-
-                {
-                    label: 'İstanbul',
-                    value: 'İstanbul',
-                },
-                {
-                    label: 'Çanakkale',
-                    value: 'Çanakkale',
-                },
-                {
-                    label: 'Çorlu',
-                    value: 'Çorlu',
-                },
-                {
-                    label: 'Tekirdağ',
-                    value: 'Tekirdağ',
-                },
-                {
-                    label: 'İzmit',
-                    value: 'İzmit',
-                },
-
-            ]
+            zones:[],
+            cities:[]
         };
-        this.state1 = {
-            selected: undefined
-        };
+      
     }
 
     onValueChange(value: string) {
@@ -129,6 +87,7 @@ export default class Filter extends Component {
                                 this.setState({
                                     zone_id: value,
                                 });
+                                this.getRegionCities(value)
                             }}
                             value={this.state.zone_id}
                             style={{ ...pickerSelectStyles }}
@@ -147,6 +106,7 @@ export default class Filter extends Component {
                             }}
                             items={this.state.cities}
                             onValueChange={value => {
+
                                 this.setState({
                                     city_id: value,
                                 });
@@ -154,7 +114,7 @@ export default class Filter extends Component {
                             value={this.state.city_id}
                             style={{ ...pickerSelectStyles }}
                             onDonePress={() => {
-                                this.onZoneSelected()
+                                this.onCitySelected()
                             }}
                         />
                     </View>
@@ -169,8 +129,10 @@ export default class Filter extends Component {
                             checkedColor='rgba(193,27,47,1)'
                             uncheckedColor='rgba(193,27,47,1)'
                             checkedIcon='square'
-                            checked={this.state.checkedStar1}
-                            onPress={() => this.setState({checkedStar1: !this.state.checkedStar1})}
+                            checked={this.state.checkedStar3}
+                            onPress={() => {
+                               this.setState({checkedStar3:!this.state.checkedStar3})
+                            }}
 
                         />
 
@@ -182,8 +144,9 @@ export default class Filter extends Component {
                             uncheckedColor='rgba(193,27,47,1)'
                             checkedIcon='square'
                             checked={this.state.checkedStar2}
-                            onPress={() => this.setState({checkedStar2: !this.state.checkedStar2})}
-
+                            onPress={() => {
+                                this.setState({checkedStar2:!this.state.checkedStar2})
+                            }}
                         />
 
                         <CheckBox
@@ -193,9 +156,10 @@ export default class Filter extends Component {
                             checkedColor='rgba(193,27,47,1)'
                             uncheckedColor='rgba(193,27,47,1)'
                             checkedIcon='square'
-                            checked={this.state.checkedStar3}
-                            onPress={() => this.setState({checkedStar3: !this.state.checkedStar3})}
-
+                            checked={this.state.checkedStar1}
+                            onPress={() => {
+                                this.setState({checkedStar1:!this.state.checkedStar1})
+                            }}
                         />
 
                         <View >
@@ -220,7 +184,8 @@ export default class Filter extends Component {
                         <TouchableOpacity
                             style={{backgroundColor:'rgba(193,27,47,1)',marginVertical:10,borderRadius:10,paddingVertical:16,width:'80%'}}
                             onPress={() => {
-                                this.props.navigation.push("FilterResult");
+                               // this.props.navigation.push("FilterResult");
+                                this.filterTapped()
                             }}
                         >
                             <Text style={{textAlign:'center',fontSize:16,fontWeight:'500',color:'white'}}>Filtrele</Text>
@@ -230,6 +195,64 @@ export default class Filter extends Component {
                 </ScrollView>
         );
     }
+
+    getRegions()
+    {
+
+        fetch('https://yedy.karakis.me/api/v1/regions', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+
+        }).then((response)=>response.json())
+            .then((responseJson)=>{
+               console.log(responseJson)
+                this.setState({zones:responseJson})
+            });
+
+
+
+    }
+    getRegionCities(value)
+    {
+        fetch('https://yedy.karakis.me/api/v1/regions/'+ value, {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+
+        }).then((response)=>response.json())
+            .then((responseJson)=>{
+                console.log(responseJson)
+                this.setState({cities:responseJson})
+            });
+    }
+    filterTapped()
+    {
+
+        var zone_id = this.state.zone_id;
+        var city_id = this.state.city_id;
+
+        if ((city_id == null || city_id =='') || zone_id == null || zone_id =='' )
+        {
+             Alert.alert('Lütfen Tüm Alanları Doldurunuz');
+            return
+        }
+
+        this.props.navigation.navigate('FilterResult',{
+            city_id:this.state.city_id,
+            zone_id:this.state.zone_id,
+            checked_star1:this.state.checkedStar1,
+            checked_star2:this.state.checkedStar2,
+            checked_star3:this.state.checkedStar3,
+            flavor_point:this.state.flavorPoint,
+        })
+
+    }
+
 }
 const styles = StyleSheet.create({
     root: {
@@ -283,7 +306,6 @@ const pickerSelectStyles = StyleSheet.create({
         color: "white"
     },
     inputAndroid: {
-        fontSize: 16,
         paddingHorizontal: 10,
         paddingVertical: 8,
         borderWidth: 0.5,

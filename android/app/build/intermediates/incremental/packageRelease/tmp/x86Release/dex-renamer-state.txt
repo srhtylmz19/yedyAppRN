@@ -1,0 +1,4 @@
+#Wed Apr 03 01:34:34 EET 2019
+base.0=/Users/serhatyilmaz/Desktop/yedyAppRN-master/android/app/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex

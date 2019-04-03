@@ -42,11 +42,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		+Xnoacj8oueEpG1Jyut3kfHN2K0=
+		U2h2FiY9CvO0J8n4GXT/fmBjXbc=
 		</data>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		gJazA/bbL9X1+BmAaVxa6VQf5uE=
+		AZ87TDnA3/6R/Avh/tmrtObz4DI=
 		</data>
 		<key>Entypo.ttf</key>
 		<data>
@@ -179,7 +179,7 @@
 		</data>
 		<key>PlugIns/YedyTests.xctest.dSYM/Contents/Resources/DWARF/YedyTests</key>
 		<data>
-		nv/XzV2ntv623Q5k9+zL9zqf1os=
+		Y8ECQRjd/neQlCowOlKm+8AsiPs=
 		</data>
 		<key>PlugIns/YedyTests.xctest/Info.plist</key>
 		<data>
@@ -187,7 +187,7 @@
 		</data>
 		<key>PlugIns/YedyTests.xctest/YedyTests</key>
 		<data>
-		CI/oWOl1qWLojOATF7ngdVcbKow=
+		UusjhJI/WOZHWAatPfOjnAMwW2I=
 		</data>
 		<key>PlugIns/YedyTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
@@ -319,22 +319,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+Xnoacj8oueEpG1Jyut3kfHN2K0=
+			U2h2FiY9CvO0J8n4GXT/fmBjXbc=
 			</data>
 			<key>hash2</key>
 			<data>
-			yuwlTl3z8YvN0eC9c0QPCnhkTPolFRDWBSmMevnGuU4=
+			AuwBHRGt/fggqmmX8Gak/GtRIlNYZet+hXNqsrTDvBs=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gJazA/bbL9X1+BmAaVxa6VQf5uE=
+			AZ87TDnA3/6R/Avh/tmrtObz4DI=
 			</data>
 			<key>hash2</key>
 			<data>
-			0mN46LH0za8tjA1iDNdMphvNqhpnVenNh2epyx1LhRY=
+			3TiyjVRM+Of60z1cqukeDv9YjM1Ua7o9Q8wqrmEQWJQ=
 			</data>
 		</dict>
 		<key>Entypo.ttf</key>
@@ -662,11 +662,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nv/XzV2ntv623Q5k9+zL9zqf1os=
+			Y8ECQRjd/neQlCowOlKm+8AsiPs=
 			</data>
 			<key>hash2</key>
 			<data>
-			+h6ri3whq6IF7jnSAobD2uZDcykcd0JiXHqUvgXJQto=
+			kp+eyUmpaUH7UeF1+gDT8C/YABTpUk1Yl+vv003FGxA=
 			</data>
 		</dict>
 		<key>PlugIns/YedyTests.xctest/Info.plist</key>
@@ -684,11 +684,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CI/oWOl1qWLojOATF7ngdVcbKow=
+			UusjhJI/WOZHWAatPfOjnAMwW2I=
 			</data>
 			<key>hash2</key>
 			<data>
-			b+LjSn6mS0ot1H831JP0WlRvXq77ZeWFYYxWhNWirp4=
+			d88jksNKtEBoiPgUa4EqNz3Qq6rtwbs9ppRWlaoPO/Q=
 			</data>
 		</dict>
 		<key>PlugIns/YedyTests.xctest/_CodeSignature/CodeResources</key>

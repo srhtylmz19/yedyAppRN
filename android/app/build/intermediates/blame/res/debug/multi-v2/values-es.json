@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/derdakarakis/Desktop/YedyLast/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml",
+            "outputFile": "/Users/serhatyilmaz/Desktop/yedyAppRN-master/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es/values-es.xml",
             "map": [
                 {
-                    "source": "/Users/derdakarakis/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/9e672ef08034379a1d8bea15e206b890/res/values-es/values-es.xml",
+                    "source": "/Users/serhatyilmaz/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/eb5a0d3547dac0eae6fed32d0fd363e3/res/values-es/values-es.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

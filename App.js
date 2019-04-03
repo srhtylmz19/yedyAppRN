@@ -13,26 +13,29 @@ import {StackNavigator} from "react-navigation";
 const StackNavigation = StackNavigator(
     {
 
-        Login: {
-            screen: Login
-        },
+
         Filter: {
             screen: Filter
         },
-        PlaceDetail: {
-            screen: PlaceDetail
-        },
 
-
-
-
-
-        PlaceList: {
-            screen: PlaceList
-        },
         FilterResult: {
             screen: FilterResult
         },
+
+
+        Homepage: {
+            screen: Homepage
+        },
+
+        Login: {
+            screen: Login
+        },
+
+
+
+
+
+
 
 
 
@@ -43,11 +46,14 @@ const StackNavigation = StackNavigator(
         ForgotPassword: {
             screen: ForgotPassword
         },
-        Homepage: {
-            screen: Homepage
+
+
+        PlaceDetail: {
+            screen: PlaceDetail
         },
-
-
+        PlaceList: {
+            screen: PlaceList
+        },
 
     },
     {

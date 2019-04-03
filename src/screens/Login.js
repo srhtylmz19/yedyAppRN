@@ -12,6 +12,7 @@ import {createStackNavigator, createAppContainer,StackActions,NavigationActions 
 
 
 export default class Login extends Component {
+
     componentDidMount() {
 
         // Start counting when the page is loaded

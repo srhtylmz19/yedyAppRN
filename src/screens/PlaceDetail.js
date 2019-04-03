@@ -1,152 +1,221 @@
 import React, {Component} from "react";
-import {View, TouchableOpacity, Text, StyleSheet, Image, ScrollView, Dimensions} from "react-native";
+import {View, TouchableOpacity, Text, StyleSheet, Image, ScrollView, Dimensions,ActivityIndicator} from "react-native";
 import {Container} from 'native-base';
 const screen_width = Dimensions.get('window').width;
 
 export default class PlaceDetail extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            restaurant_name:null,
+            restaurant_main_image:null,
+            restaurant_id:null,
+            restaurant_motto:null,
+            restaurant_header_description:null,
+            restaurant_horizontal_image1:null,
+            restaurant_horizontal_image2:null,
+            restaurant_center_description:null,
+            restaurant_chef_name:null,
+            restaurant_chef_image:null,
+            restaurant_footer_description:null,
+            next_id:null,
+
+        };
+    }
+
+    componentWillMount()
+    {
+        const restaurant_id=this.props.navigation.getParam('restaurant_id','1');
+        this.setState({
+            restaurant_id:restaurant_id,
+        })
+
+    }
+    componentDidMount() {
+
+      this.getRestaurantDetail(this.state.restaurant_id)
+
+    }
+
+    getRestaurantDetail(restaurant_id)
+    {
+
+        fetch('https://yedy.karakis.me/api/v1/place/'+restaurant_id, {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(response => response.json())
+            .then(responseJson => {
+                console.log(responseJson);
+                this.setState({
+                    restaurant_name:responseJson.restaurant_name,
+                    restaurant_main_image:responseJson.restaurant_main_image,
+                    restaurant_id:responseJson.restaurant_id,
+                    restaurant_motto:responseJson.restaurant_motto,
+                    restaurant_header_description:responseJson.restaurant_header_description,
+                    restaurant_horizontal_image1:responseJson.restaurant_horizontal_image1,
+                    restaurant_horizontal_image2:responseJson.restaurant_horizontal_image2,
+                    restaurant_center_description:responseJson.restaurant_center_description,
+                    restaurant_chef_name:responseJson.restaurant_chef_name,
+                    restaurant_chef_image:responseJson.restaurant_chef_image,
+                    restaurant_footer_description:responseJson.restaurant_footer_description,
+                    next_id:responseJson.next_id
+                })
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
     render() {
         return (
-            <ScrollView style={{flex:1,backgroundColor:'white'}}>
+            this.state.restaurant_main_image != null ?
+                <ScrollView
+                    style={{flex:1,backgroundColor:'white'}}
+                    ref='_scrollView'>
 
 
-                <View style={{paddingLeft:20,marginTop:40}}>
-                    <Text style={{
-                        fontSize:20,
-                        color:'rgba(193,27,47,1)',
-                        fontWeight:'700'
-                    }}>SERAF</Text>
-                </View>
+                    <View style={{paddingLeft:20,marginTop:40}}>
+                        <Text style={{
+                            fontSize:20,
+                            color:'rgba(193,27,47,1)',
+                            fontWeight:'700'
+                        }}>{this.state.restaurant_name}</Text>
+                    </View>
 
-                <View
-                    style={{
-                        borderBottomColor: 'rgba(193,27,47,1)',
-                        borderBottomWidth: 1
-                        ,marginBottom:10
-                    }}
-                />
-
-                <View style={{paddingLeft:20,paddingRight:20,alignItems:'center',justifyContent:'center'}}>
-                    <Image source={require("../assets/seraf.jpg")}
-                           style={{height: 350, width: 350}}
-                            resizeMode={'stretch'}/>
-                </View>
-
-                <View style={{padding:10}}>
-
-
-                    <Text
-                        numberOfLines={0}
+                    <View
                         style={{
+                            borderBottomColor: 'rgba(193,27,47,1)',
+                            borderBottomWidth: 1
+                            ,marginBottom:10
+                        }}
+                    />
+
+                    {this.state.restaurant_main_image != null ?
+                        <View style={{paddingLeft:20,paddingRight:20,alignItems:'center',justifyContent:'center'}}>
+                            <Image source={{uri:this.state.restaurant_main_image}}
+                                   style={{height: 350, width: 350}}
+                                   resizeMode={'contain'}/>
+                        </View>
+                        :null}
+
+                    <View style={{padding:10}}>
+
+
+                        <Text
+                            numberOfLines={0}
+                            style={{
+                                textAlignVertical: "center",
+                                fontSize: 13,
+                                flex: 1,  //width (according to its parent)
+                                flexDirection: 'column',    //its children will be in a column
+                            }}>
+                            {this.state.restaurant_motto} {"\n"}
+
+                            <Text style={{fontWeight:'900',fontSize:20}}>{this.state.restaurant_name}</Text>{"\n"}{"\n"}{"\n"}
+
+                            {this.state.restaurant_header_description} {"\n"}{"\n"}
+
+
+
+                        </Text>
+
+                        <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                            {this.state.restaurant_horizontal_image1 != null ?
+                                <Image source={{uri:this.state.restaurant_horizontal_image1}}
+                                       style={{height: screen_width/2 - 15, width: screen_width/2 - 15}}/>
+                                : null}
+
+                            {this.state.restaurant_horizontal_image2 != null ?
+                                <Image source={{uri:this.state.restaurant_horizontal_image2}}
+                                       style={{height: screen_width/2 - 15, width: screen_width/2 - 15}}/>
+                                : null}
+                        </View>
+
+
+                        <Text  numberOfLines={0}
+                               style={{
+                                   textAlignVertical: "center",
+                                   fontSize: 13,
+                                   marginTop:30,
+                               }}>
+
+                            {this.state.restaurant_center_description}
+
+                            {"\n"}{"\n"}
+
+                        </Text>
+
+                        <View style={{marginTop:40}}>
+                            <Text style={{
+                                fontSize:18
+                            }}>ŞEFİN CV'Si</Text>
+                            <Text style={{
+                                color: "rgba(193,27,47,1)",
+                                fontWeight: 'bold',
+                                fontSize:25
+                            }}>
+                                {this.state.restaurant_chef_name}
+                            </Text>
+                        </View>
+                        {this.state.restaurant_chef_image != null ?
+                            <Image source={{uri:this.state.restaurant_chef_image}}
+                                   style={{
+                                       height: 250,
+                                       width: screen_width-50,
+                                   }}
+                                   resizeMode={'stretch'}/>
+                            : null}
+
+
+                        <Text  style={{
                             textAlignVertical: "center",
                             fontSize: 13,
-                            flex: 1,  //width (according to its parent)
-                            flexDirection: 'column',    //its children will be in a column
+                            marginTop:25
                         }}>
-                        İstanbul'da Ezberleri Bozan Yeni Bir Mekan: {"\n"}
+                            {this.state.restaurant_footer_description}
+                        </Text>
 
-                        <Text style={{fontWeight:'900',fontSize:20}}>SERAF RESTAURANT</Text>{"\n"}{"\n"}{"\n"}
-
-                        Anadolu'nun en özel yemeklerini, şık ve nezih mekanında sunan Seraf, İstanbul'a yeni bir soluk getirdi.
-                        Gaziantep'in Beyran çorbasından Mardin'in kaburga dolmasına, Şanlıurfa'nın bostane
-                        salatasından Sivas'ın hurma tatlısına kadar pek çok özel Anadolu lezzeti Seraf
-                        Restaurant'ta İstanbullular'la buluşuyor. {"\n"}{"\n"}
-
-
-
-                    </Text>
-
-                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-                        <Image source={require("../../assets/bg2.jpeg")}
-                               style={{height: screen_width/2 - 15, width: screen_width/2 - 15}}/>
-                        <Image source={require("../../assets/bg2.jpeg")}
-                               style={{height: screen_width/2 - 15, width: screen_width/2 - 15}}/>
+                        <View
+                            style={{
+                                borderBottomColor: 'rgba(193,27,47,1)',
+                                borderBottomWidth: 1,
+                                marginTop:20,
+                                marginBottom:40
+                            }}
+                        />
                     </View>
 
-
-                    <Text  numberOfLines={0}
-                           style={{
-                               textAlignVertical: "center",
-                               fontSize: 13,
-                               marginTop:30,
-                           }}>
-                        Seraf, Anadolu'nun gerçek lezzetini yakalamak adına yemek için gerekli tüm
-                        malzemeleri yöresinden getiriyor. Doğal ortamda beslenen hayvanlardan usulüne uygun
-                        kesilmiş etleri ve mevsimine uygun olarak hasat edilen ürünleri getiren Seraf, usta
-                        şeflerin ellerinde şekillenen yemekleri şık bir ortamda misafirlerine sunuyor.
-
-                        {"\n"}{"\n"}
-                        <Text>
-
-                            Nar, zeytin, mandalina ağaçlarının bulunduğu mekanda özel yemek odaları, çocuk odalarının
-                            yanı sıra alt katında yöresel ürünlerin satıldığı Seraf Gurme Dükkan ile de dikkat
-                            çekiyor. Seraf Gurme Dükkan'da kasap, doğal lezzetler, organik lezzetler ve tatlı reyonunda
-                            bulunan her bir ürün anayurdundan getirilerek satışa sunuluyor.
-                            Anadolu'nun kadim kültüründen gelen özünü yaşatmak için yola çıkan Seraf Restaurant,
-                            iş dünyasının göbeği Mahmutbey'de taze, doğal ürünleri ve ağaçlarının yarattığı özel
-                            ambiyansı ile misafirlerini ağırlıyor.
-
-                        </Text>
-                    </Text>
-
-                    <View style={{marginTop:40}}>
-                        <Text style={{
-                            fontSize:18
-                        }}>ŞEFİN CV'Si</Text>
-                        <Text style={{
-                            color: "rgba(193,27,47,1)",
-                            fontWeight: 'bold',
-                            fontSize:25
+                    <View style={{backgroundColor:'rgba(193,27,47,1)',position:'absolute',right:20,bottom:10,marginBottom:15}}>
+                        <TouchableOpacity onPress={()=>{
+                            this.refs._scrollView.scrollTo({ y: 0, animated: true });
+                            this.getNextRestaurant()
                         }}>
-                            Mustafa ÖZTÜRK
-                        </Text>
+                            <Text style={{fontWeight:'700',color:'white',textAlign:'center'}}> SONRAKİ </Text>
+                        </TouchableOpacity>
                     </View>
 
-                    <Image source={require("../../assets/chef.jpeg")}
-                           style={{
-                               height: 250,
-                               width: screen_width-50,
-                           }}
-                    resizeMode={'stretch'}/>
-
-                    <Text  style={{
-                        textAlignVertical: "center",
-                        fontSize: 13,
-                        marginTop:25
-                    }}>
-                        Seraf restaurant şeflerinden Mustafa Öztürk, 1983 yılı Kayseri doğumludur. Afyon
-                        Kocatepe Üniversitesi'ne devam ederken Grand Özel Hotel Afyon da iş hayatına başlamıştır.
-                        Fan Fang Chinese Restaurant, Boğaziçi Borsa Restaurant,
-                        Cercis Murat Konağı gibi Anadolu mutfağında söz sahibi restaurantlarda çalışmıştır.
-                        Lübnan, Tunus, Suriye gibi ülkelerde araştırmalar yapmış olup, kuruluşundan bu yana Seraf
-                        bünyesinde hizmet vermektedir.
-                    </Text>
-
+                </ScrollView>
+                :
+                <View style={{justifyContent:'center',alignItems:'center'}}>
+                    <ActivityIndicator/>
                 </View>
-
-                <View style={{flexDirection: 'row'}}>
-
-
-                    <Text
-                        numberOfLines={100}
-                        style={{
-                            textAlignVertical: "center",
-                            top: 10,
-                            left: 10,
-                            right: 10,
-                            fontSize: 15,
-                            flex: 1,  //width (according to its parent)
-                            flexDirection: 'column',    //its children will be in a column
-                            alignItems: 'center', //align items according to this parent (like setting self align on each item)
-                            justifyContent: 'center',
-                            flexWrap: 'wrap',
-                            marginLeft: 25,
-                            marginRight: 10,
-                        }}>
-                    </Text>
-                </View>
-            </ScrollView>
 
         );
+    }
+    getNextRestaurant()
+    {
+        if (this.state.next_id == null && this.state.next_id == '')
+        {
+            return
+        }
+        this.getRestaurantDetail(this.state.next_id);
+
     }
 }
 const styles = StyleSheet.create({

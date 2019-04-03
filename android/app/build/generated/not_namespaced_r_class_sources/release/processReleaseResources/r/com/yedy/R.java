@@ -1974,13 +1974,26 @@ public final class R {
     public static final int abc_textfield_search_activated_mtrl_alpha=0x7f06003b;
     public static final int abc_textfield_search_default_mtrl_alpha=0x7f06003c;
     public static final int abc_textfield_search_material=0x7f06003d;
-    public static final int node_modules_reactnavigation_src_views_assets_backicon=0x7f06003e;
-    public static final int node_modules_reactnavigation_src_views_assets_backiconmask=0x7f06003f;
-    public static final int notification_template_icon_bg=0x7f060040;
-    public static final int src_assets_0ded1f1ce75ef0f5e0150ad8a51ef1feb2d6800a=0x7f060041;
-    public static final int src_assets_1a9f0964e9a6eedf88f62a6b2b5d383961232aad=0x7f060042;
-    public static final int src_assets_landing=0x7f060043;
-    public static final int src_assets_venue1=0x7f060044;
+    public static final int assets_close_icon=0x7f06003e;
+    public static final int assets_filter=0x7f06003f;
+    public static final int assets_yeniyilzdiz=0x7f060040;
+    public static final int node_modules_reactnativeratings_src_images_airbnbstar=0x7f060041;
+    public static final int node_modules_reactnativeratings_src_images_airbnbstarselected=0x7f060042;
+    public static final int node_modules_reactnativeratings_src_images_bell=0x7f060043;
+    public static final int node_modules_reactnativeratings_src_images_heart=0x7f060044;
+    public static final int node_modules_reactnativeratings_src_images_rocket=0x7f060045;
+    public static final int node_modules_reactnativeratings_src_images_star=0x7f060046;
+    public static final int node_modules_reactnavigation_src_views_assets_backicon=0x7f060047;
+    public static final int node_modules_reactnavigation_src_views_assets_backiconmask=0x7f060048;
+    public static final int notification_template_icon_bg=0x7f060049;
+    public static final int src_assets_0ded1f1ce75ef0f5e0150ad8a51ef1feb2d6800a=0x7f06004a;
+    public static final int src_assets_1a9f0964e9a6eedf88f62a6b2b5d383961232aad=0x7f06004b;
+    public static final int src_assets_landing=0x7f06004c;
+    public static final int src_assets_line=0x7f06004d;
+    public static final int src_assets_sef=0x7f06004e;
+    public static final int src_assets_seraf=0x7f06004f;
+    public static final int src_assets_seraf2=0x7f060050;
+    public static final int src_assets_venue1=0x7f060051;
   }
   public static final class id {
     public static final int action0=0x7f070000;
